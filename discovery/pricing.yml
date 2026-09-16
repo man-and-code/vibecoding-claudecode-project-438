@@ -1,59 +1,58 @@
-pricing:
-  pain_value:
-    evidence:
-      - source: interviews/01-kirill.md
-        question: 9
-        quote: "Думаю, часа три суммарно. Сначала около двух часов на следующий день и потом ещё примерно час возвращался к этому."
-      - source: interviews/02-maxim.md
-        question: 9
-        quote: "Примерно полтора-два часа. Где-то час вечером просмотрел всё и потом ещё минут сорок-пятьдесят возвращался к отдельным контактам."
-    inputs:
-      hours_kirill: 3
-      hourly_rate_kirill_rub: 775
-      hours_maxim: 1.75
-      hourly_rate_maxim_rub: 750
-      monthly_frequency_assumption: 1
-    assumption_note: "Частота «1 мероприятие в месяц с последующей обработкой контактов» — расчётное допущение, а не факт из интервью. Крупные мероприятия проходят примерно раз в 3–6 месяцев, между ними бывают мероприятия меньшего масштаба."
-    calculation:
-      kirill_rub: 2325
-      kirill_formula: "3 × 775 = 2325"
-      maxim_rub: 1312.5
-      maxim_formula: "1.75 × 750 = 1312.5"
-      average_rub: 1818.75
-      average_formula: "(2325 + 1312.5) / 2 = 1818.75"
-    pain_value_per_month: 1800
-
-  price:
-    corridor:
-      reference: "Ориентир курса: первая цена составляет примерно 10–20% от создаваемой ценности"
-      low_rub: 180
-      high_rub: 360
-      low_formula: "10% от 1800 = 180"
-      high_formula: "20% от 1800 = 360"
-    market_reference:
-      - competitor: folk
-        plan: Standard
-        price: "$24 / место / мес при годовой оплате ($288/год)"
-        source: "discovery/competitors.md, проверено 16.09.2026, https://www.folk.app/pricing"
-      - competitor: Covve
-        plan: Essential
-        price: "$12 / место / мес при помесячной оплате"
-        source: "discovery/competitors.md, проверено 16.09.2026, https://covve.com/pricing"
-      note: "Цены folk и Covve — дополнительный рыночный ориентир, они не заменяют основной расчёт цены от ценности."
-    price: 299
-    price_share_of_pain_value_percent: 16.6
-    price_share_note: "299 составляет примерно 16.6% от pain_value_per_month (1800) и находится внутри коридора 180–360."
-
-  users_month_3:
-    value: 10
-    type: forecast_hypothesis
-    note: "Прогнозная продуктовая гипотеза ранней стадии для первоначальной оценки экономики side project, а не результат интервью и не норматив курса. После запуска гипотеза должна проверяться фактическими данными. Не путать с числом профессиональных контактов, которые пользователи собирают и обрабатывают после мероприятий."
-
-  revenue_month_3:
-    formula: "price × users_month_3 = 299 × 10 = 2990"
-    value: 2990
-
 pain_value_per_month: 1800
+
+how: "Величина боли рассчитана из времени, потраченного Кириллом и Максимом на разбор контактов после мероприятия, оценённого через стоимость их часа (775 ₽ и 750 ₽ соответственно), при расчётном допущении о частоте одного мероприятия с последующей обработкой контактов в месяц."
+
+evidence:
+  - source: interviews/01-kirill.md
+    question: 9
+    quote: "Думаю, часа три суммарно. Сначала около двух часов на следующий день и потом ещё примерно час возвращался к этому."
+  - source: interviews/02-maxim.md
+    question: 9
+    quote: "Примерно полтора-два часа. Где-то час вечером просмотрел всё и потом ещё минут сорок-пятьдесят возвращался к отдельным контактам."
+
+inputs:
+  hours_kirill: 3
+  hourly_rate_kirill_rub: 775
+  hours_maxim: 1.75
+  hourly_rate_maxim_rub: 750
+  monthly_frequency_assumption: 1
+
+assumption_note: "Частота «1 мероприятие в месяц с последующей обработкой контактов» — расчётное допущение, а не факт из интервью. Крупные мероприятия проходят примерно раз в 3–6 месяцев, между ними бывают мероприятия меньшего масштаба."
+
+calculation:
+  kirill_rub: 2325
+  kirill_formula: "3 × 775 = 2325"
+  maxim_rub: 1312.5
+  maxim_formula: "1.75 × 750 = 1312.5"
+  average_rub: 1818.75
+  average_formula: "(2325 + 1312.5) / 2 = 1818.75"
+
 price: 299
+
+price_corridor:
+  reference: "Ориентир курса: первая цена составляет примерно 10–20% от создаваемой ценности"
+  low_rub: 180
+  high_rub: 360
+  low_formula: "10% от 1800 = 180"
+  high_formula: "20% от 1800 = 360"
+
+price_share_of_pain_value_percent: 16.6
+price_share_note: "299 составляет примерно 16.6% от pain_value_per_month (1800) и находится внутри коридора 180–360."
+
+market_reference:
+  - competitor: folk
+    plan: Standard
+    price: "$24 / место / мес при годовой оплате ($288/год)"
+    source: "discovery/competitors.md, проверено 16.09.2026, https://www.folk.app/pricing"
+  - competitor: Covve
+    plan: Essential
+    price: "$12 / место / мес при помесячной оплате"
+    source: "discovery/competitors.md, проверено 16.09.2026, https://covve.com/pricing"
+market_reference_note: "Цены folk и Covve — дополнительный рыночный ориентир, они не заменяют основной расчёт цены от ценности."
+
 users_month_3: 10
+users_month_3_type: forecast_hypothesis
+users_month_3_note: "Прогнозная продуктовая гипотеза ранней стадии для первоначальной оценки экономики side project, а не результат интервью и не норматив курса. После запуска гипотеза должна проверяться фактическими данными. Не путать с числом профессиональных контактов, которые пользователи собирают и обрабатывают после мероприятий."
+
 revenue_month_3: 2990
+revenue_month_3_formula: "price × users_month_3 = 299 × 10 = 2990"
