@@ -19,10 +19,6 @@
 
 Handshake — прототип в Claude Design: https://claude.ai/artifact/7LuWKG6C1i2X63SFP3UnW2
 
-## Стек
-
-- Разное
-
 ## Установка
 
 <!-- Опишите установку: клонирование, зависимости, переменные окружения -->
@@ -31,10 +27,6 @@ Handshake — прототип в Claude Design: https://claude.ai/artifact/7LuW
 git clone https://github.com/man-and-code/vibecoding-claudecode-project-438.git
 cd vibecoding-claudecode-project-438
 ```
-
-## Использование
-
-<!-- Добавьте примеры запуска и запись asciinema — именно это смотрит работодатель -->
 
 ---
 
